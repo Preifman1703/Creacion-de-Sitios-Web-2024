@@ -1,3 +1,10 @@
+/*quitar estilos previos*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace, sans-serif;
+}
+
 body{
     text-align: center;
     background-color: #ffc650;
