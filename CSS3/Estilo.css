@@ -129,7 +129,7 @@ nav li:hover{
     background: #FF6600;
 }
 
-#cabecera{
+#cabecera, header{
     background: blue;
 }
 

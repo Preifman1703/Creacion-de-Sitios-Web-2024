@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Página HTML de listas OL</title>
+    <SCript>
+        var imagen = document.getElementById("Programacion");
+        /*cambio de Dimensiones*/    
+        Programacion.width = 300;
+        /*Alternativa para Internet Explorer*/
+            /*document.images.Programacion.width = 300;*/
+         
+        /*script*/
+        function cambiaImagen() {
+            if(document.images){
+                document.images.Programacion.width = 1200;
+            } else {
+                Programacion.width = 1200;
+            }
+        }
+
+        function DisminuyeImagen(){
+            if(document.images){
+                document.images.Programacion.width = 300;
+            } else {
+                Programacion.width = 300;
+            }
+        }
+    </SCript>
+</head>
+
+<body>
+    <img src="/Cambiar dinam... el tamaño de una imagen/image/Programacion_2024.jpg" id="Programacion"
+        title="Portada de Programador Avanzado">
+        <!-- Lanzar Funcion -->
+        <!-- EJEMPLO DE BOTON: -->
+        <p><h2>Aumenta Imagen: <input type="button" onclick="cambiaImagen()"></h2></p>
+        <p><h2>Disminuye Imagen: <input type="button" onclick="DisminuyeImagen()"></h2></p>
+</body>
+
+</html>

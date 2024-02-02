@@ -1,0 +1,37 @@
+body{
+    background-color: #E9C588;
+    font-family: "Arial";
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    color: #2f2d2d;
+    cursor: pointer;
+}
+
+#pagina{
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contenido{
+    margin-right: 0 auto;
+    width: 1000px;
+    height: 400px;
+    background-color: rgba(21, 35, 46, 0.8);
+    color: #FFF;
+    text-align: left;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer{
+    padding: 50px;
+}
+
+h1{
+    color: #e44e2d;
+}
