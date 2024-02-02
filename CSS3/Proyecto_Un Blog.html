@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,19 @@
     <link rel="stylesheet" href="Estilo.css">
     <title>Mi Pagina</title>
 </head>
+
 <body>
-    
-   
+
+
     <div id="agrupar">
-        
+
         <header>
             <hgroup>
                 <h1 class="tp">Este es el titulo principal del sitio Web</h1>
             </hgroup>
         </header>
-        
-         <nav>
+
+        <nav>
             <ul>
                 <li>Portada</li>
                 <li>Clases</li>
@@ -27,10 +29,10 @@
                 <li>Videos</li>
             </ul>
         </nav>
-        
+
         <section>
             <article>
-                
+
                 <header id="cabecera">
                     <hgroup>
                         <h1 class="can1">Titulo de la cabecera del articulo numero 1</h1>
@@ -41,42 +43,100 @@
                         <figcaption>
                             Esta es la imagen del Primer Articulo.
                         </figcaption>
-                    </figure> 
-                        <p><span>Esta paginma es del usuario <mark>Programador</mark> Tres De</span><br></p>
-                        <p><em>contenido em<br></em>
+                    </figure>
+                    <p><span>Esta paginma es del usuario <mark>Programador</mark> Tres De</span><br></p>
+                    <p><em>contenido em<br></em>
                         <strong>contenido strong</strong>
-                        </p>
-                            <p><small>Derechos Reservados &copy; 2024</small></p>
-                        <p>
-                            <address>
-                                Correo: <a href="javitto:programador2004@gmail.com">Programador 3D</a>
-                            </address>
-                        </p>
-                        <p>
-                            <span>El canal de youtube esta a nombre de <cite>Programador3d</cite></span>
-                            <time datetime="2024-10-13"><br> Un dia Cuaquiera</time>
-                        </p>
+                    </p>
+                    <p><small>Derechos Reservados &copy; 2024</small></p>
+                    <p>
+                    <address>
+                        Correo: <a href="javitto:programador2004@gmail.com">Programador 3D</a>
+                    </address>
+                    </p>
+                    <p>
+                        <span>El canal de youtube esta a nombre de <cite>Programador3d</cite></span>
+                        <time datetime="2024-10-13"><br> Un dia Cuaquiera</time>
+                    </p>
                 </header>
-                    contenido del articulo
+                contenido del articulo
                 <footer>
                     <p>Comentarios (5) :)</p>
                 </footer>
             </article>
         </section>
-    
+
         <aside>
+            <!-- MOSTRAR CUADRO DE ALERTA CON UN MENSAJE AL PASAR EL MOUSE POR ENCIMA -->
+            <a href="http://www.revistablenderianos.org"
+                onmouseover="javascript:alert('¡Pincha encima de mi!');return false">Revista Blenderianos</a>
+            <!-- MOSTRAR CUADRO DE ALERTA AL HACER CLIC SOBRE UN VINCULO -->
+            <a href="http://www.revistablenderianos.org"
+                onclick="javascript:alert('¡Pincha encima de mi!');return false">revistablenderianos</a>
+            <!-- AUMENTAR EL TAMAÑO DEL TEXTO AL PASAR EL MOUSE -->
+            <div id="tamaño"><a href="http://tu-sitio.com"
+                    onmouseover="javascript: void(document.getElementById('tamaño').style.fontSize='3em')"
+                    onmouseout="javascript: void(document.getElementById('tamaño').style.fontSize='1em')">VINCULO</a>
+            </div>
+            <!-- MENSAJE DE CONFIRMACION AL PRECIONAR EN UN VINCULO -->
+            <a href="javascript: if(confirm('¿Quieres entrar a Blenderianos?')){parent.location='http://www.revistablenderianos.org';};">REVISTA
+                BLENDERIANOS</a>
+                <!-- IMPRIMIR PÁGINA -->
+                <input type="button" value="Imprime esta pagina" onclick="windows.print()">
+
             <script>
+                /*DEFINISION DE VARIABLES*/
                 var nombre = prompt("Introduce tu nombre, por favor:");
                 var apellido = prompt("Introduce tu apellido, por favor:");
-                document.write("<h2>Bienvenido "+nombre+" "+apellido+" </h2>");
+                /*ESCRIBIR RESULTADOS*/
+                document.write("<h2>Bienvenido " + nombre + " " + apellido + " </h2>");
+                
+                /*CREAR UN CONTADOR DE VISITANTES ENGAÑOSO*/
+                var ran
+                ran = Math.round(Math.random()*50000)
+                document.write("Usted es un visitante "+ ran +" de esta pagina")
+                
+                /*Crear restricciones al uso del mouse*/
 
+                /*SIN CLIC DERECHO*/
+                document.oncontextmenu = function(){ return false}
+
+                /*SIN SELECCION NI OPCION DE COPIAR*/
+                window.onload = function()
+                // Para internet Explorer
+                {document.onselectstartn = function(){return false;}
+                //Para Firefox
+                document.onmousedown = function(){return false;}}
+
+                /*CREAR UNA ACCION CON EL BOTÓN DERECHO DEL MOUSE*/
+               /* function right(event){
+                    if (navigator.appName == 'Netscape' && event.which == 3){
+                    alert('Prohibido click derecho');
+                    return false;
+                    } else if (navigator.appName == 'Microsoft Internet Explorer' && event.button == 2) {
+                        alert('Prohibido click derecho');} return false;
+                     return true;}
+                    
+                    document.onmousedown = right;*/
+
+                    /*Texto Parpadeante*/
+                    window.setInterval(Parpadear, 500);
+                    var color = "red";
+                    function Parpadear(){
+                    var parpadeo = document.getElementById('parpadeo');
+                    color = (color == "#ffffff")? "red" : "#ffffff";
+                    parpadeo.style.color = color;
+                    parpadeo.style.fontSize = '32px';}
             </script>
+            <div id="parpadeo">Programador!</div>
+            <div id="parpadeo" onclick="parent.location='http://www.Programador3d.blogspot.com'">3D</div>
         </aside>
 
         <footer id="pie">
             Derechos Reservados &copy; 2024-2036
         </footer>
-   </div> 
-    
+    </div>
+
 </body>
+
 </html>
