@@ -1,35 +1,35 @@
 /*quitar estilos previos*/
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: monospace, sans-serif;
 }
 
-body{
+body {
     text-align: center;
     background-color: #ffc650;
 }
 
-nav li{
+nav li {
     display: block;
     text-align: center;
     list-style: none;
     font: bold;
 }
 
-h1{
+h1 {
     font: bold 20px verdana, sans-serif;
     text-shadow: rgb(8, 1, 1) 5px 5px 9px;
-   
+
 }
 
-h2{
+h2 {
     font: bold 14px verdana, sans-serif;
     text-shadow: hsla(120, 100%, 50%, 0.5) 3px 3px 5px;
     margin-bottom: 20px;
 }
 
-img{
+img {
     border: 2px solid #EF4836;
     width: 100%;
 }
@@ -37,15 +37,15 @@ img{
 /* nuevos atributos en CSS3*/
 
 /*BORDER-RADIUS*/
-img:hover{
+img:hover {
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
-    
+
     /*BOX-SHADOW*/
     box-shadow: rgb(8, 0, 0) 5px 5px 15px 6px;
-    -moz-box-shadow:rgb(8, 0, 0) 5px 5px 15px 6px;
-    -webkit-box-shadow:rgb(8, 0, 0) 5px 5px 15px 6px;
+    -moz-box-shadow: rgb(8, 0, 0) 5px 5px 15px 6px;
+    -webkit-box-shadow: rgb(8, 0, 0) 5px 5px 15px 6px;
     box-shadow: rgb(8, 0, 0) 10px 10px 15px 6px;
 
     /*MOVER, ROTAR Y CAMBIAR EL TAMAÑO DE ELEMENTOS*/
@@ -53,12 +53,12 @@ img:hover{
     -moz-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);*/
 
-        transform: skew(20deg);
-   /* transform: translate(100px);
+    transform: skew(20deg);
+    /* transform: translate(100px);
     transition: transform 1s ease-in-out 0.1s;*/
 }
 
-article{
+article {
     background: white;
     border: 1px solid #999999;
     padding: 20px;
@@ -66,35 +66,36 @@ article{
 }
 
 /* atributos Outline y Outline-offset + margin-top*/
-article footer{
+article footer {
     margin-top: 15px;
     text-align: right;
-    outline: 5px dashed #000077; /* dashed: Define que sea lineas de guiones */
+    outline: 5px dashed #000077;
+    /* dashed: Define que sea lineas de guiones */
     outline-offset: 10px;
 }
 
-time{
+time {
     color: #999999;
 }
 
-figcaption{
+figcaption {
     font: italic 14px verdana, sans-serif;
 }
 
-#pie{
+#pie {
     clear: both;
     text-align: center;
     padding: 20px;
     border-top: 2px solid #eeff44;
 }
 
-section{
+section {
     float: left;
     width: 660px;
     margin: 20px;
 }
 
-aside{
+aside {
     float: left;
     width: 220px;
     margin: 20px 0px;
@@ -104,12 +105,12 @@ aside{
     background: #999999;
 }
 
-nav{
+nav {
     background: rgb(128, 62, 4);
     padding: 5px 15px;
 }
 
-nav li{
+nav li {
     display: inline-block;
     list-style: none;
     padding: 5px;
@@ -118,29 +119,52 @@ nav li{
     cursor: pointer;
 }
 
-nav li:hover{
+nav li:hover {
     background-color: #F5C700;
 }
 
-#agrupar{
+#agrupar {
     width: 960px;
     margin: 17px auto;
     text-align: left;
     background: #FF6600;
 }
 
-#cabecera, header{
+#cabecera,
+header {
     background: blue;
 }
 
-.tp, .can1{
+.tp,
+.can1 {
     color: white;
 }
 
-@media (max-width:990px){
-    body{
-        width: 100%;
-   }
+#wrap {
+    height: 280px;
+    width: 500px;
+    background-color: rgba(58, 58, 58, 0.36);
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
 }
 
+#bg-playlist-n{
+    background-image: url(https://png.pngtree.com/background/20230612/original/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-picture-image_3180467.jpg);
+    height: 311px;
+    width: 520px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+    padding-top: 9px;
+    background-repeat: no-repeat;
+}
 
+@media (max-width:990px) {
+    body {
+        width: 100%;
+    }
+}

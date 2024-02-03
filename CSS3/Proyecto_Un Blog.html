@@ -32,7 +32,6 @@
 
         <section>
             <article>
-
                 <header id="cabecera">
                     <hgroup>
                         <h1 class="can1">Titulo de la cabecera del articulo numero 1</h1>
@@ -63,7 +62,24 @@
                 <footer>
                     <p>Comentarios (5) :)</p>
                 </footer>
+               
             </article>
+                    <article>
+                        <div id="bg-playlist-n">
+                            <div id="wrap">
+                                <iframe width="500" height="280" src="https://www.youtube.com/embed/bje4lTTXVRM"
+                                    title="Cazador de Demonios PELÍCULA COMPLETA | Películas de Acción | Wesley Snipes | LA Noche de Películas"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                                <select name="name" onchange="video.location.href=this.options[this.selectedIndex].value">
+                                    <option value="https://youtu.be/cb12KmMMDJA">canal de noticias-internacional-argentina</option>
+                                    <option value="https://youtu.be/ew_4CUbUN2k">musica de los 80-music-classic</option>
+                                    <option value="https://youtu.be/dGmVRHfmC0A">video divertidos-</video>chucheiro</option>
+                                </select>
+                    </article>
         </section>
 
         <aside>
@@ -79,10 +95,11 @@
                     onmouseout="javascript: void(document.getElementById('tamaño').style.fontSize='1em')">VINCULO</a>
             </div>
             <!-- MENSAJE DE CONFIRMACION AL PRECIONAR EN UN VINCULO -->
-            <a href="javascript: if(confirm('¿Quieres entrar a Blenderianos?')){parent.location='http://www.revistablenderianos.org';};">REVISTA
+            <a
+                href="javascript: if(confirm('¿Quieres entrar a Blenderianos?')){parent.location='http://www.revistablenderianos.org';};">REVISTA
                 BLENDERIANOS</a>
-                <!-- IMPRIMIR PÁGINA -->
-                <input type="button" value="Imprime esta pagina" onclick="windows.print()">
+            <!-- IMPRIMIR PÁGINA -->
+            <input type="button" value="Imprime esta pagina" onclick="windows.print()">
 
             <script>
                 /*DEFINISION DE VARIABLES*/
@@ -90,43 +107,46 @@
                 var apellido = prompt("Introduce tu apellido, por favor:");
                 /*ESCRIBIR RESULTADOS*/
                 document.write("<h2>Bienvenido " + nombre + " " + apellido + " </h2>");
-                
+
                 /*CREAR UN CONTADOR DE VISITANTES ENGAÑOSO*/
                 var ran
-                ran = Math.round(Math.random()*50000)
-                document.write("Usted es un visitante "+ ran +" de esta pagina")
-                
+                ran = Math.round(Math.random() * 50000)
+                document.write("Usted es un visitante " + ran + " de esta pagina")
+
                 /*Crear restricciones al uso del mouse*/
 
                 /*SIN CLIC DERECHO*/
-                document.oncontextmenu = function(){ return false}
+                document.oncontextmenu = function () { return false }
 
                 /*SIN SELECCION NI OPCION DE COPIAR*/
-                window.onload = function()
+               /* window.onload = function ()
                 // Para internet Explorer
-                {document.onselectstartn = function(){return false;}
-                //Para Firefox
-                document.onmousedown = function(){return false;}}
+                {
+                    document.onselectstartn = function () { return false; }
+                    //Para Firefox
+                    document.onmousedown = function () { return false; }
+                }*/
 
                 /*CREAR UNA ACCION CON EL BOTÓN DERECHO DEL MOUSE*/
-               /* function right(event){
-                    if (navigator.appName == 'Netscape' && event.which == 3){
-                    alert('Prohibido click derecho');
-                    return false;
-                    } else if (navigator.appName == 'Microsoft Internet Explorer' && event.button == 2) {
-                        alert('Prohibido click derecho');} return false;
-                     return true;}
-                    
-                    document.onmousedown = right;*/
+                 /*function right(event){
+                     if (navigator.appName == 'Netscape' && event.which == 3){
+                     alert('Prohibido click derecho');
+                     return false;
+                     } else if (navigator.appName == 'Microsoft Internet Explorer' && event.button == 2) {
+                         alert('Prohibido click derecho');} return false;
+                      return true;}
+                     
+                     document.onmousedown = right;*/
 
-                    /*Texto Parpadeante*/
-                    window.setInterval(Parpadear, 500);
-                    var color = "red";
-                    function Parpadear(){
+                /*Texto Parpadeante*/
+                window.setInterval(Parpadear, 500);
+                var color = "red";
+                function Parpadear() {
                     var parpadeo = document.getElementById('parpadeo');
-                    color = (color == "#ffffff")? "red" : "#ffffff";
+                    color = (color == "#ffffff") ? "red" : "#ffffff";
                     parpadeo.style.color = color;
-                    parpadeo.style.fontSize = '32px';}
+                    parpadeo.style.fontSize = '32px';
+                }
             </script>
             <div id="parpadeo">Programador!</div>
             <div id="parpadeo" onclick="parent.location='http://www.Programador3d.blogspot.com'">3D</div>
